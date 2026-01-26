@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { createPortal } from 'react-dom'
 import './Projects.css'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null)
 
@@ -13,7 +15,7 @@ const Projects = () => {
             description: 'AI-powered desktop application that transforms PowerPoint presentations into dynamic lecture videos using Google Gemini AI. Features automatic video production pipeline with slide extraction, TTS synchronization, and rendering.',
             technologies: ['Python', 'Google Gemini AI', 'Google Cloud TTS', 'Flet', 'MoviePy', 'DeepL API'],
             github: 'https://github.com/ecegokalp/pptx_converter',
-            image: '/projects/video-generator.png',
+            image: 'projects/video-generator.png',
             highlights: [
                 'Multidisciplinary Engineering Capstone Project',
                 'Dual-service translation system for 10+ languages',
@@ -27,7 +29,7 @@ const Projects = () => {
             description: 'Custom RAG pipeline that cleans university course data and embeds it into ChromaDB, generating context-aware AI responses. Flask backend processes natural language queries about prerequisites and departments.',
             technologies: ['Python', 'Flask', 'React', 'ChromaDB', 'Google Gemini AI'],
             github: 'https://github.com/ecegokalp/IUE-Course-Intelligence',
-            image: '/projects/course-intelligence.png',
+            image: 'projects/course-intelligence.png',
             highlights: [
                 'Custom RAG (Retrieval-Augmented Generation) pipeline',
                 'Intelligent query filtering and response visualization',
@@ -41,7 +43,7 @@ const Projects = () => {
             description: 'Desktop tool that automates programming assignment evaluation. Multi-language compiler architecture with ZIP extraction and output comparison reduces manual grading time.',
             technologies: ['C#', 'WPF', '.NET 9', 'SQLite', 'XAML', 'JSON'],
             github: 'https://github.com/benhur-okur/The-Integrated-Assignment-Environment',
-            image: '/projects/iae.png',
+            image: 'projects/iae.png',
             highlights: [
                 'Customizable multi-language compiler',
                 'Modern WPF interface',
@@ -55,7 +57,7 @@ const Projects = () => {
             description: 'Desktop application with full CRUD functionality and JSON-based persistence for personal book collection management. User-friendly GUI with JavaFX and multi-criteria search algorithms.',
             technologies: ['Java 20', 'JavaFX 22', 'Gradle', 'FXML', 'Google Gson'],
             github: 'https://github.com/sudedaka/LibraryManagement',
-            image: '/projects/library-management.png',
+            image: 'projects/library-management.png',
             highlights: [
                 'Multi-criteria search algorithms',
                 'Efficient data storage with Google Gson',
@@ -69,7 +71,7 @@ const Projects = () => {
             description: 'Desktop application designed to automate university exam scheduling. Uses constraint satisfaction algorithm to assign courses to classrooms and time slots while preventing student conflicts and respecting room capacities.',
             technologies: ['Python', 'Tkinter', 'SQLite', 'CSV/PDF Export'],
             github: 'https://github.com/ecegokalp/SE-302-Project',
-            image: '/projects/exam-scheduler.png',
+            image: 'projects/exam-scheduler.png',
             highlights: [
                 'Constraint satisfaction scheduling algorithm',
                 'Multiple view modes: General, Daily, Student-based, Classroom-based',
@@ -91,7 +93,7 @@ const Projects = () => {
 
                     <div className="modal-image-container">
                         <img
-                            src={selectedProject.image}
+                            src={baseUrl + selectedProject.image}
                             alt={selectedProject.title}
                             className="modal-image"
                         />
@@ -153,7 +155,7 @@ const Projects = () => {
                         >
                             <div className="project-image-wrapper">
                                 <img
-                                    src={project.image}
+                                    src={baseUrl + project.image}
                                     alt={project.title}
                                     className="project-image"
                                 />

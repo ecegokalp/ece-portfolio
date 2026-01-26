@@ -67,7 +67,7 @@ const Hero = () => {
                         <div className="hero-image-glow"></div>
                         <div className="hero-image-container">
                             <img
-                                src="/profile.jpg"
+                                src={import.meta.env.BASE_URL + "profile.jpg"}
                                 alt="Ece Naz Gökalp"
                                 className="hero-photo"
                             />
