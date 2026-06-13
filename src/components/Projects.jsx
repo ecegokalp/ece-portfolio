@@ -78,6 +78,38 @@ const Projects = () => {
                 'CSV and PDF export functionality',
                 'Database save/load with comparison feature'
             ]
+        },
+        {
+            id: 6,
+            title: 'Wander  Travel Companion',
+            shortTitle: 'Wander',
+            description: 'A cross-platform Flutter & Firebase travel app that pairs AI-powered trip planning with a social travel feed. Google Gemini builds day-by-day itineraries and even reads your tickets to auto-fill trips, while an interactive map, multi-currency budget tracker, and community stories round out the experience.',
+            technologies: ['Flutter', 'Dart', 'Firebase', 'Google Gemini AI', 'REST API', 'OpenStreetMap'],
+            github: 'https://github.com/ecegokalp/travellerApp',
+            image: 'projects/wander.png',
+            highlights: [
+                'AI itineraries, checklists & blogs with Google Gemini',
+                'Smart document scanning to auto-fill trips & calendar',
+                'Interactive map with swipe-to-discover places',
+                'Multi-currency budget planner with live rates',
+                'Social feed: stories, following, likes & notifications'
+            ]
+        },
+        {
+            id: 7,
+            title: 'MedTrack Plus: Senior Computer Engineering Capstone',
+            shortTitle: 'MedTrack Plus',
+            description: 'FENG 498 Project: a privacy-first Flutter health platform that uses on-device computer vision to verify a patient actually takes their medication, not just that it was dispensed. A scoring engine classifies each attempt as success, suspicious or rejected, uploading a short, auto-expiring clip for a caregiver to review only when the result is uncertain. Works with or without a custom ESP32 smart dispenser.',
+            technologies: ['Flutter', 'Google ML Kit', 'Firebase', 'Dart', 'Computer Vision', 'Cloud Functions', 'TypeScript', 'Riverpod', 'FCM', 'ESP32'],
+            github: 'https://github.com/efesrnn/medTrackPlus',
+            image: 'projects/medtrack.png',
+            highlights: [
+                'Real-time on-device computer vision with Google ML Kit',
+                'Three-way verification with caregiver review of uncertain cases',
+                'Privacy-first: on-device inference, 24h auto-delete (KVKK)',
+                'Device-Free Mode with multi-patient dashboards & bulk controls',
+                'Serverless Firebase backend with optional ESP32 smart dispenser'
+            ]
         }
     ]
 
