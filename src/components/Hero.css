@@ -90,9 +90,17 @@
     margin-bottom: 16px;
     letter-spacing: -2px;
     background: var(--gradient-text);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradient 8s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-name {
+        animation: none;
+    }
 }
 
 .hero-title {
@@ -106,7 +114,7 @@
 }
 
 .title-static {
-    color: var(--text-primary);
+    color: var(--primary);
 }
 
 .title-dynamic {
@@ -196,6 +204,11 @@
     background: var(--gradient);
     padding: 4px;
     z-index: 1;
+    transition: transform var(--transition-medium);
+}
+
+.hero-image-wrapper:hover .hero-image-container {
+    transform: scale(1.03);
 }
 
 .hero-avatar {

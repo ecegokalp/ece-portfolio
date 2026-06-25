@@ -1,4 +1,33 @@
+import { useEffect, useRef, useState } from 'react'
 import './Hero.css'
+
+// Animates a number from 0 to its target once, on mount.
+const CountUp = ({ value }) => {
+    const match = String(value).match(/^(\d+)(.*)$/)
+    const target = match ? parseInt(match[1], 10) : 0
+    const suffix = match ? match[2] : ''
+    const [count, setCount] = useState(0)
+    const rafRef = useRef(null)
+
+    useEffect(() => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            setCount(target)
+            return
+        }
+        const duration = 1200
+        const start = performance.now()
+        const tick = (now) => {
+            const p = Math.min((now - start) / duration, 1)
+            const eased = 1 - Math.pow(1 - p, 3)
+            setCount(Math.round(target * eased))
+            if (p < 1) rafRef.current = requestAnimationFrame(tick)
+        }
+        rafRef.current = requestAnimationFrame(tick)
+        return () => cancelAnimationFrame(rafRef.current)
+    }, [target])
+
+    return <span>{count}{suffix}</span>
+}
 
 const Hero = () => {
     return (
@@ -21,15 +50,14 @@ const Hero = () => {
                     </h1>
 
                     <h2 className="hero-title">
-                        <span className="title-static">Software Developer</span>
-                        <span className="title-dynamic">
-                            <span className="title-item">& Computer Engineering Student</span>
-                        </span>
+                        <span className="title-static">Software Engineer · Full-Stack Developer</span>
                     </h2>
 
                     <p className="hero-description">
-                        I'm a senior Computer Engineering student at Izmir University of Economics.
-                        I'm passionate about full-stack development, AI/ML, and modern web technologies.
+                        I'm a software developer who turns ideas into real, useful products — from
+                        full-stack web platforms to AI-powered mobile apps. I'm especially passionate
+                        about artificial intelligence, clean code, and building experiences that
+                        genuinely help people.
                     </p>
 
                     <div className="hero-cta">
@@ -46,18 +74,18 @@ const Hero = () => {
 
                     <div className="hero-stats">
                         <div className="stat-item">
-                            <span className="stat-number">4+</span>
+                            <span className="stat-number"><CountUp value="4+" /></span>
                             <span className="stat-label">Years of Study</span>
                         </div>
                         <div className="stat-divider"></div>
                         <div className="stat-item">
-                            <span className="stat-number">7+</span>
+                            <span className="stat-number"><CountUp value="7+" /></span>
                             <span className="stat-label">Projects</span>
                         </div>
                         <div className="stat-divider"></div>
                         <div className="stat-item">
-                            <span className="stat-number">1</span>
-                            <span className="stat-label">Internship</span>
+                            <span className="stat-number"><CountUp value="2" /></span>
+                            <span className="stat-label">Internships</span>
                         </div>
                     </div>
                 </div>

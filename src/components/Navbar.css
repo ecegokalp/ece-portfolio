@@ -9,11 +9,11 @@
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 12px 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-md);
     border-bottom: 1px solid var(--border);
 }
 
@@ -67,13 +67,40 @@
 
 .nav-link:hover {
     color: var(--text-primary);
-    background: rgba(0, 0, 0, 0.04);
+    background: var(--hover-bg);
 }
 
 .nav-btn {
     margin-left: 16px;
     padding: 10px 24px;
     font-size: 0.85rem;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    margin-left: 12px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Mobile Menu Button */
@@ -94,7 +121,7 @@
 }
 
 .mobile-menu-btn:hover {
-    background: rgba(0, 0, 0, 0.04);
+    background: var(--hover-bg);
 }
 
 .mobile-menu-btn span {

@@ -8,12 +8,23 @@ const Experience = () => {
             period: 'June 2025 - August 2025',
             location: 'IFM, Ataşehir, Istanbul',
             description: [
-                'Developed full-stack Interest Management System (.NET)',
-                'Designed modular React.js credit calculator component',
-                'Implemented annuity-based algorithms and KKDF/BSMV tax compliance',
-                'JSON-based data seeding for multi-currency interest rates database design'
+                'Architected a full-stack Interest Management System (.NET 8, Angular 19) with a modular React.js credit calculator component',
+                'Implemented annuity-based algorithms and automated KKDF/BSMV tax compliance, improving calculation accuracy by 20%',
+                'Designed a dynamic SQL Server database for multi-currency interest rates using JSON-based data seeding'
             ],
-            technologies: ['.NET ', 'C#', 'Angular', 'React.js', 'SQL Server', 'RESTful API']
+            technologies: ['.NET 8', 'C#', 'Angular 19', 'React.js', 'SQL Server', 'RESTful API']
+        },
+        {
+            company: 'SCA Social',
+            role: 'Project Management Intern (Remote)',
+            period: 'October 2025 - November 2025',
+            location: 'Remote',
+            description: [
+                'Authored project charters and scope definitions (objectives, deliverables, risks, stakeholders) for AI-focused product concepts',
+                'Built project schedules and milestone tracking with Gantt charts',
+                'Prepared organizational, process and OKR-based planning documentation'
+            ],
+            technologies: ['Project Management', 'Jira', 'Gantt Charts', 'OKR Planning']
         }
     ]
 
@@ -55,13 +66,6 @@ const Experience = () => {
                     ))}
                 </div>
 
-                <div className="experience-note">
-                    <p>
-                        As a developer starting my career, I focus on continuous learning and
-                        gaining professional experience. Every project and internship experience
-                        makes me a better developer.
-                    </p>
-                </div>
             </div>
         </section>
     )

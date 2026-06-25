@@ -1,5 +1,5 @@
 .contact {
-    background: var(--bg-secondary);
+    background: transparent;
     overflow: hidden;
 }
 
@@ -55,8 +55,16 @@
 }
 
 .contact-icon {
-    font-size: 1.8rem;
-    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.contact-icon svg {
+    width: 26px;
+    height: 26px;
 }
 
 .contact-details {

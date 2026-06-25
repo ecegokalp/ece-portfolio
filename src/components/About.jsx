@@ -11,8 +11,8 @@ const About = () => {
                 <div className="about-content">
                     <div className="about-text">
                         <p className="about-intro">
-                            I'm <strong>Ece Naz Gökalp</strong>, a senior Computer Engineering student
-                            at Izmir University of Economics. I'm constantly developing myself in
+                            I'm <strong>Ece Naz Gökalp</strong>, a Computer Engineering graduate
+                            from Izmir University of Economics. I'm constantly developing myself in
                             software development, artificial intelligence, and web technologies.
                         </p>
 
@@ -42,7 +42,7 @@ const About = () => {
                                         <span className="timeline-date">Oct 2021 - June 2026</span>
                                         <h4>Izmir University of Economics</h4>
                                         <p>B.S. in Computer Engineering</p>
-                                        <span className="timeline-note">Merit Scholarship • GPA: 2.96</span>
+                                        <span className="timeline-note">Merit Scholarship • GPA: 3.08</span>
                                     </div>
                                 </div>
 
